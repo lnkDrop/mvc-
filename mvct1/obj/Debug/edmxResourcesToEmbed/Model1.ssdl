@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="xw_OAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="gengjinTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kehuID" Type="bigint" Nullable="false" />
+    <Property Name="gengjinText" Type="varchar" MaxLength="600" Nullable="false" />
+    <Property Name="gengjinTime" Type="datetime" Nullable="false" />
+    <Property Name="adduser" Type="int" Nullable="false" />
+    <Property Name="addTime" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="kehuTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kehuCompanyName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="kehuContractName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="kehuTelPhone" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="kehuOtherTel" Type="varchar" MaxLength="100" />
+    <Property Name="qq" Type="varchar" MaxLength="50" />
+    <Property Name="weixin" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="campusNum" Type="int" />
+    <Property Name="domain" Type="varchar" MaxLength="100" />
+    <Property Name="payMoneyStyle" Type="varchar" MaxLength="100" />
+    <Property Name="firstQianDanDateTime" Type="datetime" Nullable="false" />
+    <Property Name="nextPayDateTime" Type="datetime" Nullable="false" />
+    <Property Name="kehuInfoBeizhu" Type="varchar" MaxLength="1000" />
+    <Property Name="saleStaffID" Type="int" />
+  </EntityType>
+  <EntityType Name="liushuiTable">
+    <Key>
+      <PropertyRef Name="liushuiID" />
+    </Key>
+    <Property Name="liushuiID" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="moneyStyleID" Type="int" />
+    <Property Name="zhichuMoney" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="shouruMoney" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="liushuiShuoming" Type="varchar" MaxLength="1000" />
+    <Property Name="jinbanrenStaffID" Type="int" />
+    <Property Name="liushuiDateTime" Type="datetime" />
+    <Property Name="qiandanID" Type="bigint" />
+  </EntityType>
+  <EntityType Name="menuTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="text" Type="nvarchar" MaxLength="50" />
+    <Property Name="fid" Type="int" />
+    <Property Name="url" Type="nvarchar" MaxLength="100" />
+    <Property Name="iconCls" Type="nvarchar" MaxLength="50" />
+    <Property Name="paixu" Type="int" />
+    <Property Name="levelID" Type="int" />
+    <Property Name="IsCss" Type="int" />
+    <Property Name="isquanxian" Type="int" />
+  </EntityType>
+  <EntityType Name="moneyStyleTable">
+    <Key>
+      <PropertyRef Name="moneyStyleID" />
+    </Key>
+    <Property Name="moneyStyleID" Type="int" Nullable="false" />
+    <Property Name="moneyStyleName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="shouruOrzhichu" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="qianDanInfoTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="kehuID" Type="bigint" Nullable="false" />
+    <Property Name="shishouMoney" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="saleStaffID" Type="int" Nullable="false" />
+    <Property Name="qianDanDateTime" Type="datetime" Nullable="false" />
+    <Property Name="xinqianORxufei" Type="int" Nullable="false" />
+    <Property Name="qiandanBeizhu" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="staffTable">
+    <Key>
+      <PropertyRef Name="staffID" />
+    </Key>
+    <Property Name="staffID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="staffName" Type="varchar" MaxLength="50" />
+    <Property Name="staffPhone" Type="varchar" MaxLength="50" />
+    <Property Name="userName" Type="varchar" MaxLength="50" />
+    <Property Name="passwd" Type="varchar" MaxLength="2000" />
+    <Property Name="userState" Type="int" />
+  </EntityType>
+  <EntityType Name="yixiangTable">
+    <Key>
+      <PropertyRef Name="yxID" />
+    </Key>
+    <Property Name="yxID" Type="int" Nullable="false" />
+    <Property Name="yxName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="yxKehuTable">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="companyName" Type="varchar" MaxLength="100" />
+    <Property Name="contractName" Type="varchar" MaxLength="100" />
+    <Property Name="mPhone" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="otherTel" Type="varchar" MaxLength="100" />
+    <Property Name="qq" Type="varchar" MaxLength="100" />
+    <Property Name="weixin" Type="varchar" MaxLength="100" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="yixiangID" Type="int" Nullable="false" />
+    <Property Name="nextGenjinDateTime" Type="datetime" />
+    <Property Name="saleStaffID" Type="int" />
+    <Property Name="recordInDateTime" Type="datetime" />
+    <Property Name="kehuInfoBeizhu" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityContainer Name="xw_OAModelStoreContainer">
+    <EntitySet Name="gengjinTable" EntityType="Self.gengjinTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="kehuTable" EntityType="Self.kehuTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="liushuiTable" EntityType="Self.liushuiTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="menuTable" EntityType="Self.menuTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="moneyStyleTable" EntityType="Self.moneyStyleTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="qianDanInfoTable" EntityType="Self.qianDanInfoTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="staffTable" EntityType="Self.staffTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="yixiangTable" EntityType="Self.yixiangTable" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="yxKehuTable" EntityType="Self.yxKehuTable" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

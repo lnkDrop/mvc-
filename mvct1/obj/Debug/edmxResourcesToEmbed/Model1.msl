@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="xw_OAModelStoreContainer" CdmEntityContainer="xw_OAEntities">
+    <EntitySetMapping Name="gengjinTable">
+      <EntityTypeMapping TypeName="xw_OAModel.gengjinTable">
+        <MappingFragment StoreEntitySet="gengjinTable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="kehuID" ColumnName="kehuID" />
+          <ScalarProperty Name="gengjinText" ColumnName="gengjinText" />
+          <ScalarProperty Name="gengjinTime" ColumnName="gengjinTime" />
+          <ScalarProperty Name="adduser" ColumnName="adduser" />
+          <ScalarProperty Name="addTime" ColumnName="addTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kehuTable">
+      <EntityTypeMapping TypeName="xw_OAModel.kehuTable">
+        <MappingFragment StoreEntitySet="kehuTable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="kehuCompanyName" ColumnName="kehuCompanyName" />
+          <ScalarProperty Name="kehuContractName" ColumnName="kehuContractName" />
+          <ScalarProperty Name="kehuTelPhone" ColumnName="kehuTelPhone" />
+          <ScalarProperty Name="kehuOtherTel" ColumnName="kehuOtherTel" />
+          <ScalarProperty Name="qq" ColumnName="qq" />
+          <ScalarProperty Name="weixin" ColumnName="weixin" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="campusNum" ColumnName="campusNum" />
+          <ScalarProperty Name="domain" ColumnName="domain" />
+          <ScalarProperty Name="payMoneyStyle" ColumnName="payMoneyStyle" />
+          <ScalarProperty Name="firstQianDanDateTime" ColumnName="firstQianDanDateTime" />
+          <ScalarProperty Name="nextPayDateTime" ColumnName="nextPayDateTime" />
+          <ScalarProperty Name="kehuInfoBeizhu" ColumnName="kehuInfoBeizhu" />
+          <ScalarProperty Name="saleStaffID" ColumnName="saleStaffID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="liushuiTable">
+      <EntityTypeMapping TypeName="xw_OAModel.liushuiTable">
+        <MappingFragment StoreEntitySet="liushuiTable">
+          <ScalarProperty Name="liushuiID" ColumnName="liushuiID" />
+          <ScalarProperty Name="moneyStyleID" ColumnName="moneyStyleID" />
+          <ScalarProperty Name="zhichuMoney" ColumnName="zhichuMoney" />
+          <ScalarProperty Name="shouruMoney" ColumnName="shouruMoney" />
+          <ScalarProperty Name="liushuiShuoming" ColumnName="liushuiShuoming" />
+          <ScalarProperty Name="jinbanrenStaffID" ColumnName="jinbanrenStaffID" />
+          <ScalarProperty Name="liushuiDateTime" ColumnName="liushuiDateTime" />
+          <ScalarProperty Name="qiandanID" ColumnName="qiandanID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="menuTable">
+      <EntityTypeMapping TypeName="xw_OAModel.menuTable">
+        <MappingFragment StoreEntitySet="menuTable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="text" ColumnName="text" />
+          <ScalarProperty Name="fid" ColumnName="fid" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="iconCls" ColumnName="iconCls" />
+          <ScalarProperty Name="paixu" ColumnName="paixu" />
+          <ScalarProperty Name="levelID" ColumnName="levelID" />
+          <ScalarProperty Name="IsCss" ColumnName="IsCss" />
+          <ScalarProperty Name="isquanxian" ColumnName="isquanxian" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="moneyStyleTable">
+      <EntityTypeMapping TypeName="xw_OAModel.moneyStyleTable">
+        <MappingFragment StoreEntitySet="moneyStyleTable">
+          <ScalarProperty Name="moneyStyleID" ColumnName="moneyStyleID" />
+          <ScalarProperty Name="moneyStyleName" ColumnName="moneyStyleName" />
+          <ScalarProperty Name="shouruOrzhichu" ColumnName="shouruOrzhichu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="qianDanInfoTable">
+      <EntityTypeMapping TypeName="xw_OAModel.qianDanInfoTable">
+        <MappingFragment StoreEntitySet="qianDanInfoTable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="kehuID" ColumnName="kehuID" />
+          <ScalarProperty Name="shishouMoney" ColumnName="shishouMoney" />
+          <ScalarProperty Name="saleStaffID" ColumnName="saleStaffID" />
+          <ScalarProperty Name="qianDanDateTime" ColumnName="qianDanDateTime" />
+          <ScalarProperty Name="xinqianORxufei" ColumnName="xinqianORxufei" />
+          <ScalarProperty Name="qiandanBeizhu" ColumnName="qiandanBeizhu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="staffTable">
+      <EntityTypeMapping TypeName="xw_OAModel.staffTable">
+        <MappingFragment StoreEntitySet="staffTable">
+          <ScalarProperty Name="staffID" ColumnName="staffID" />
+          <ScalarProperty Name="staffName" ColumnName="staffName" />
+          <ScalarProperty Name="staffPhone" ColumnName="staffPhone" />
+          <ScalarProperty Name="userName" ColumnName="userName" />
+          <ScalarProperty Name="passwd" ColumnName="passwd" />
+          <ScalarProperty Name="userState" ColumnName="userState" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="yixiangTable">
+      <EntityTypeMapping TypeName="xw_OAModel.yixiangTable">
+        <MappingFragment StoreEntitySet="yixiangTable">
+          <ScalarProperty Name="yxID" ColumnName="yxID" />
+          <ScalarProperty Name="yxName" ColumnName="yxName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="yxKehuTable">
+      <EntityTypeMapping TypeName="xw_OAModel.yxKehuTable">
+        <MappingFragment StoreEntitySet="yxKehuTable">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="companyName" ColumnName="companyName" />
+          <ScalarProperty Name="contractName" ColumnName="contractName" />
+          <ScalarProperty Name="mPhone" ColumnName="mPhone" />
+          <ScalarProperty Name="otherTel" ColumnName="otherTel" />
+          <ScalarProperty Name="qq" ColumnName="qq" />
+          <ScalarProperty Name="weixin" ColumnName="weixin" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="yixiangID" ColumnName="yixiangID" />
+          <ScalarProperty Name="nextGenjinDateTime" ColumnName="nextGenjinDateTime" />
+          <ScalarProperty Name="saleStaffID" ColumnName="saleStaffID" />
+          <ScalarProperty Name="recordInDateTime" ColumnName="recordInDateTime" />
+          <ScalarProperty Name="kehuInfoBeizhu" ColumnName="kehuInfoBeizhu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

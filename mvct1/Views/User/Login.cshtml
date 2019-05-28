@@ -1,0 +1,81 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Login</title>
+    <meta name="description" content="particles.js is a lightweight JavaScript library for creating particles.">
+    <meta name="author" content="Vincent Garreau" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="~/Content/login/css/style.css" rel="stylesheet" />
+    <link href="~/Content/login/css/reset.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="particles-js">
+        <div class="login">
+            <form method="post">
+                <div class="login-top">
+                    欢迎登录后台管理系统
+                </div>
+                <div class="login-center clearfix">
+                    <div class="login-center-img"><img src="~/Content/login/img/name.png" /></div>
+                    <div class="login-center-input">
+                        <input type="text" name="loginuser" placeholder="请输入您的用户名" onclick="JavaScript:this.value=''" onblur="this.placeholder='请输入您的用户名'" />
+                        <div class="login-center-input-text">用户名</div>
+                    </div>
+                </div>
+                <div class="login-center clearfix">
+                    <div class="login-center-img"><img src="~/Content/login/img/password.png" /></div>
+                    <div class="login-center-input">
+                        <input type="password" name="loginpwd" placeholder="请输入您的密码" onclick="JavaScript:this.value=''" onblur="this.placeholder='请输入您的密码'" />
+                        <div class="login-center-input-text">密码</div>
+
+                    </div>
+
+                </div>
+                
+                <div class="login-center clearfix">
+                    <div class="login-center-img2"><img id="valiCode" src="/User/GetValidateCode" /></div>
+                    <div class="login-center-input2">
+                        <input type="text" name="loginyzhm" placeholder="请输入验证码" onclick="JavaScript:this.value=''" onblur="this.placeholder='请输入验证码'" />
+                        <div class="login-center-input-text">验证码</div>
+                    </div>
+
+
+                </div>
+                <div class="login-center clearfix">
+                    <div class="login-center-input">
+                        <input name="" type="submit" value="登录" />
+                    </div>
+
+                </div>
+
+
+
+
+            </form>
+        </div>
+
+        <div class="sk-rotating-plane"></div>
+
+    </div>
+
+
+    <!-- scripts -->
+    <script src="~/Content/login/js/jquery.js"></script>
+    <script src="~/Content/login/js/particles.min.js"></script>
+    <script src="~/Content/login/js/app.js"></script>
+    <script type="text/javascript"></script>
+    <script>
+        $(function () {
+            //$("#name").focus();
+            $("#valiCode").bind("click", function () {
+                this.src = "/User/GetValidateCode?time=" + (new Date()).getTime();
+            });
+        });
+    </script>
+
+</body>
+</html>
